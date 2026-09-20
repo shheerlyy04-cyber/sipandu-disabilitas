@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>SIPANDU Disabilitas | DPMPTSP Pacitan</title>
+
+<style>
+
+/* =========================
+   DASAR
+========================= */
+
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial,Helvetica,sans-serif;
+    background:#f5f7fa;
+    color:#1f2937;
+    line-height:1.6;
+    transition:0.3s;
+}
+
+a{
+    text-decoration:none;
+}
+
+button{
+    font-family:inherit;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    background:white;
+    padding:15px 5%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:15px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+    box-shadow:0 2px 12px rgba(0,0,0,0.08);
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:10px;
+}
+
+.logo{
+    width:48px;
+    height:48px;
+    background:#087f6b;
+    color:white;
+    border-radius:12px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:25px;
+}
+
+.logo-text h1{
+    color:#087f6b;
+    font-size:20px;
+}
+
+.logo-text p{
+    font-size:11px;
+    color:#64748b;
+}
+
+nav{
+    display:flex;
+    gap:18px;
+}
+
+nav a{
+    color:#334155;
+    font-weight:bold;
+    font-size:14px;
+}
+
+nav a:hover{
+    color:#087f6b;
+}
+
+
+/* =========================
+   AKSESIBILITAS
+========================= */
+
+.accessibility{
+    background:#e6f7f3;
+    padding:10px 5%;
+    display:flex;
+    justify-content:flex-end;
+    gap:7px;
+    flex-wrap:wrap;
+}
+
+.accessibility button{
+    background:white;
+    color:#087f6b;
+    border:1px solid #087f6b;
+    padding:7px 11px;
+    border-radius:8px;
+    cursor:pointer;
+    font-weight:bold;
+    font-size:12px;
+}
+
+.accessibility button:hover{
+    background:#087f6b;
+    color:white;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    min-height:530px;
+    padding:65px 5%;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:40px;
+    background:linear-gradient(135deg,#e9faf6,#f8fafc);
+}
+
+.hero-text{
+    max-width:650px;
+}
+
+.badge{
+    display:inline-block;
+    background:#c9f3e9;
+    color:#087f6b;
+    padding:7px 13px;
+    border-radius:30px;
+    font-size:12px;
+    font-weight:bold;
+    margin-bottom:18px;
+}
+
+.hero h2{
+    font-size:clamp(38px,7vw,65px);
+    line-height:1.08;
+    color:#172033;
+    margin-bottom:20px;
+}
+
+.hero h2 span{
+    color:#087f6b;
+    display:block;
+}
+
+.hero p{
+    color:#64748b;
+    font-size:17px;
+    max-width:600px;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:12px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    display:inline-block;
+    padding:12px 19px;
+    border-radius:9px;
+    font-weight:bold;
+}
+
+.btn-primary{
+    background:#087f6b;
+    color:white;
+}
+
+.btn-secondary{
+    background:white;
+    color:#087f6b;
+    border:2px solid #087f6b;
+}
+
+.hero-card{
+    width:310px;
+    background:white;
+    padding:35px 25px;
+    text-align:center;
+    border-radius:22px;
+    box-shadow:0 15px 40px rgba(8,127,107,0.15);
+}
+
+.big-icon{
+    width:115px;
+    height:115px;
+    margin:auto auto 20px;
+    border-radius:50%;
+    background:#d8f7f0;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    font-size:60px;
+}
+
+.hero-card h3{
+    font-size:23px;
+    margin-bottom:8px;
+}
+
+.hero-card p{
+    font-size:14px;
+}
+
+
+/* =========================
+   STATISTIK
+========================= */
+
+.stats{
+    background:white;
+    padding:25px 5%;
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:15px;
+}
+
+.stat{
+    text-align:center;
+    padding:20px;
+    border:1px solid #e2e8f0;
+    border-radius:14px;
+}
+
+.stat-icon{
+    font-size:30px;
+}
+
+.stat h3{
+    margin:5px 0;
+    font-size:17px;
+}
+
+.stat p{
+    color:#64748b;
+    font-size:13px;
+}
+
+
+/* =========================
+   SECTION
+========================= */
+
+section{
+    scroll-margin-top:100px;
+}
+
+.section{
+    padding:70px 5%;
+}
+
+.section-title{
+    text-align:center;
+    max-width:700px;
+    margin:0 auto 40px;
+}
+
+.section-title span{
+    color:#087f6b;
+    font-size:12px;
+    font-weight:bold;
+}
+
+.section-title h2{
+    font-size:35px;
+    margin:7px 0;
+}
+
+.section-title p{
+    color:#64748b;
+}
+
+
+/* =========================
+   KEBUTUHAN AKSES
+========================= */
+
+.access-grid{
+    display:grid;
+    grid-template-columns:repeat(4,1fr);
+    gap:15px;
+}
+
+.access-card{
+    background:white;
+    border:1px solid #e2e8f0;
+    padding:25px 18px;
+    border-radius:17px;
+    cursor:pointer;
+    transition:0.3s;
+}
+
+.access-card:hover{
+    transform:translateY(-5px);
+    border-color:#087f6b;
+    box-shadow:0 12px 30px rgba(0,0,0,0.08);
+}
+
+.access-icon{
+    font-size:40px;
+    margin-bottom:10px;
+}
+
+.access-card h3{
+    font-size:17px;
+    margin-bottom:7px;
+}
+
+.access-card p{
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:10px;
+}
+
+.access-card button{
+    border:none;
+    background:none;
+    color:#087f6b;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+
+/* =========================
+   HASIL BANTUAN
+========================= */
+
+#hasil{
+    display:none;
+    padding:0 5% 50px;
+}
+
+.hasil-box{
+    max-width:900px;
+    margin:auto;
+    background:#d8f7f0;
+    border-left:6px solid #087f6b;
+    border-radius:12px;
+    padding:25px;
+}
+
+.hasil-box h2{
+    color:#075e50;
+    margin-bottom:8px;
+}
+
+.hasil-box p{
+    color:#334155;
+}
+
+.close-small{
+    margin-top:15px;
+    background:#087f6b;
+    color:white;
+    border:none;
+    border-radius:7px;
+    padding:8px 15px;
+    cursor:pointer;
+}
+
+
+/* =========================
+   LAYANAN
+========================= */
+
+#layanan{
+    background:#eef2f5;
+}
+
+.service-grid{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.service{
+    background:white;
+    border-radius:17px;
+    padding:23px;
+    display:flex;
+    gap:18px;
+    border:1px solid #e2e8f0;
+}
+
+.service-icon{
+    min-width:60px;
+    height:60px;
+    border-radius:13px;
+    background:#d8f7f0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    font-size:29px;
+}
+
+.service-label{
+    font-size:11px;
+    color:#087f6b;
+    font-weight:bold;
+}
+
+.service h3{
+    margin:4px 0;
+}
+
+.service p{
+    color:#64748b;
+    font-size:13px;
+    margin-bottom:12px;
+}
+
+.service button{
+    border:none;
+    background:#087f6b;
+    color:white;
+    padding:8px 13px;
+    border-radius:7px;
+    cursor:pointer;
+    font-weight:bold;
+}
+
+
+/* =========================
+   MODAL
+========================= */
+
+#modal{
+    display:none;
+    position:fixed;
+    z-index:2000;
+    left:0;
+    top:0;
+    width:100%;
+    height:100%;
+    background:rgba(0,0,0,0.65);
+    padding:25px;
+}
+
+.modal-box{
+    background:white;
+    max-width:600px;
+    max-height:85vh;
+    overflow:auto;
+    margin:50px auto;
+    padding:30px;
+    border-radius:18px;
+    position:relative;
+}
+
+.modal-box h2{
+    color:#087f6b;
+    margin-bottom:18px;
+}
+
+.modal-box h4{
+    margin-top:15px;
+    margin-bottom:5px;
+}
+
+.modal-box ul{
+    padding-left:20px;
+}
+
+.close{
+    position:absolute;
+    right:15px;
+    top:8px;
+    border:none;
+    background:none;
+    font-size:30px;
+    cursor:pointer;
+    color:#64748b;
+}
+
+
+/* =========================
+   BANTUAN
+========================= */
+
+.help{
+    background:#087f6b;
+    color:white;
+    padding:65px 5%;
+}
+
+.help-container{
+    max-width:1100px;
+    margin:auto;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:30px;
+}
+
+.help h2{
+    font-size:35px;
+    margin:7px 0;
+}
+
+.help p{
+    opacity:0.9;
+}
+
+.contact{
+    background:white;
+    color:#1f2937;
+    padding:20px;
+    border-radius:13px;
+    display:flex;
+    gap:15px;
+    align-items:center;
+    min-width:290px;
+}
+
+.contact-icon{
+    font-size:35px;
+}
+
+.contact p{
+    color:#64748b;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#111827;
+    color:white;
+    text-align:center;
+    padding:35px 5%;
+}
+
+footer h3{
+    color:#5eead4;
+    font-size:23px;
+}
+
+footer p{
+    color:#cbd5e1;
+    font-size:13px;
+    margin-top:5px;
+}
+
+
+/* =========================
+   KONTRAS TINGGI
+========================= */
+
+body.kontras{
+    background:#000;
+    color:#fff;
+}
+
+body.kontras header,
+body.kontras .hero-card,
+body.kontras .stat,
+body.kontras .access-card,
+body.kontras .service,
+body.kontras .modal-box{
+    background:#000;
+    color:#fff;
+    border:2px solid white;
+}
+
+body.kontras .hero,
+body.kontras #layanan{
+    background:#000;
+}
+
+body.kontras p,
+body.kontras .access-card p,
+body.kontras .service p,
+body.kontras .section-title p{
+    color:white;
+}
+
+body.kontras nav a{
+    color:white;
+}
+
+
+/* =========================
+   RESPONSIVE HP
+========================= */
+
+@media(max-width:850px){
+
+    header{
+        flex-direction:column;
+    }
+
+    nav{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .hero{
+        flex-direction:column;
+        text-align:center;
+        padding:55px 5%;
+    }
+
+    .buttons{
+        justify-content:center;
+    }
+
+    .hero-card{
+        width:100%;
+        max-width:350px;
+    }
+
+    .access-grid{
+        grid-template-columns:repeat(2,1fr);
+    }
+
+    .stats{
+        grid-template-columns:1fr;
+    }
+
+    .help-container{
+        flex-direction:column;
+        text-align:center;
+    }
+}
+
+
+@media(max-width:550px){
+
+    .access-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service-grid{
+        grid-template-columns:1fr;
+    }
+
+    .service{
+        flex-direction:column;
+    }
+
+    .section-title h2{
+        font-size:29px;
+    }
+
+    .hero h2{
+        font-size:42px;
+    }
+
+    .help h2{
+        font-size:30px;
+    }
+
+    .contact{
+        width:100%;
+        min-width:0;
+    }
+
+    .accessibility{
+        justify-content:center;
+    }
+
+    nav a{
+        font-size:12px;
+    }
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- ================= HEADER ================= -->
+
+<header>
+
+    <div class="logo-area">
+
+        <div class="logo">
+            ♿
+        </div>
+
+        <div class="logo-text">
+
+            <h1>SIPANDU</h1>
+
+            <p>
+                Pelayanan Ramah Disabilitas
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <nav>
+
+        <a href="#beranda">
+            Beranda
+        </a>
+
+        <a href="#akses">
+            Kebutuhan
+        </a>
+
+        <a href="#layanan">
+            Layanan
+        </a>
+
+        <a href="#bantuan">
+            Bantuan
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- ================= AKSESIBILITAS ================= -->
+
+<div class="accessibility">
+
+    <button onclick="besar()">
+        A+ Perbesar
+    </button>
+
+    <button onclick="kecil()">
+        A- Perkecil
+    </button>
+
+    <button onclick="kontras()">
+        ◐ Kontras
+    </button>
+
+    <button onclick="baca()">
+        🔊 Bacakan
+    </button>
+
+</div>
+
+
+
+<!-- ================= HERO ================= -->
+
+<section class="hero" id="beranda">
+
+    <div class="hero-text">
+
+        <span class="badge">
+            ♿ LAYANAN RAMAH DISABILITAS
+        </span>
+
+
+        <h2>
+
+            Akses Pelayanan Publik
+
+            <span>
+                Lebih Mudah
+            </span>
+
+        </h2>
+
+
+        <p>
+
+            SIPANDU merupakan prototype sistem informasi
+            yang membantu masyarakat memperoleh informasi
+            pelayanan DPMPTSP dengan lebih mudah,
+            sederhana, dan ramah bagi penyandang disabilitas.
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#layanan"
+                class="btn btn-primary"
+            >
+                📋 Lihat Layanan
+            </a>
+
+
+            <a
+                href="#akses"
+                class="btn btn-secondary"
+            >
+                ♿ Pilih Kebutuhan
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <div class="hero-card">
+
+        <div class="big-icon">
+            ♿
+        </div>
+
+        <h3>
+            Pelayanan untuk Semua
+        </h3>
+
+        <p>
+
+            Informasi pelayanan dibuat
+            lebih mudah dipahami dan digunakan.
+
+        </p>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= STATISTIK ================= -->
+
+<div class="stats">
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            ♿
+        </div>
+
+        <h3>
+            Ramah Disabilitas
+        </h3>
+
+        <p>
+            Informasi mudah diakses
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            📋
+        </div>
+
+        <h3>
+            Informasi Layanan
+        </h3>
+
+        <p>
+            Persyaratan dan prosedur
+        </p>
+
+    </div>
+
+
+    <div class="stat">
+
+        <div class="stat-icon">
+            🔊
+        </div>
+
+        <h3>
+            Fitur Aksesibilitas
+        </h3>
+
+        <p>
+            Bantuan untuk pengguna
+        </p>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= KEBUTUHAN ================= -->
+
+<section class="section" id="akses">
+
+    <div class="section-title">
+
+        <span>
+            AKSESIBILITAS
+        </span>
+
+        <h2>
+            Pilih Kebutuhan Anda
+        </h2>
+
+        <p>
+            Pilih kategori yang sesuai untuk
+            melihat informasi bantuan.
+        </p>
+
+    </div>
+
+
+
+    <div class="access-grid">
+
+
+        <div
+            class="access-card"
+            onclick="kebutuhan('penglihatan')"
+        >
+
+            <div class="access-icon">
+                👁️
+            </div>
+
+            <h3>
+                Hambatan Penglihatan
+            </h3>
+
+            <p>
+                Bantuan membaca informasi
+                dan penggunaan suara.
+            </p>
+
+            <button>
+                Pilih →
+            </button>
+
+        </div>
+
+
+
+        <div
+            class="access-card"
+            onclick="kebutuhan('pendengaran')"
+        >
+
+            <div class="access-icon">
+                👂
+            </div>
+
+            <h3>
+                Hambatan Pendengaran
+            </h3>
+
+            <p>
+                Informasi tersedia dalam
+                bentuk teks.
+            </p>
+
+            <button>
+                Pilih →
+            </button>
+
+        </div>
+
+
+
+        <div
+            class="access-card"
+            onclick="kebutuhan('mobilitas')"
+        >
+
+            <div class="access-icon">
+                🦽
+            </div>
+
+            <h3>
+                Hambatan Mobilitas
+            </h3>
+
+            <p>
+                Informasi mengenai akses
+                dan bantuan pelayanan.
+            </p>
+
+            <button>
+                Pilih →
+            </button>
+
+        </div>
+
+
+
+        <div
+            class="access-card"
+            onclick="kebutuhan('bantuan')"
+        >
+
+            <div class="access-icon">
+                🤝
+            </div>
+
+            <h3>
+                Membutuhkan Bantuan
+            </h3>
+
+            <p>
+                Bantuan umum dalam memperoleh
+                pelayanan.
+            </p>
+
+            <button>
+                Pilih →
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= HASIL ================= -->
+
+<div id="hasil">
+
+    <div class="hasil-box">
+
+        <h2 id="judulHasil">
+            Bantuan
+        </h2>
+
+        <p id="isiHasil">
+            Silakan pilih kebutuhan.
+        </p>
+
+        <button
+            class="close-small"
+            onclick="tutupHasil()"
+        >
+            Tutup
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= LAYANAN ================= -->
+
+<section class="section" id="layanan">
+
+    <div class="section-title">
+
+        <span>
+            PELAYANAN
+        </span>
+
+        <h2>
+            Informasi Layanan
+        </h2>
+
+        <p>
+            Pilih layanan untuk melihat
+            informasi lebih lanjut.
+        </p>
+
+    </div>
+
+
+
+    <div class="service-grid">
+
+
+        <!-- NIB -->
+
+        <div class="service">
+
+            <div class="service-icon">
+                🪪
+            </div>
+
+            <div>
+
+                <span class="service-label">
+                    PERIZINAN
+                </span>
+
+                <h3>
+                    Nomor Induk Berusaha
+                </h3>
+
+                <p>
+                    Informasi mengenai layanan
+                    pembuatan NIB.
+                </p>
+
+                <button onclick="info('nib')">
+                    Lihat Informasi
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PERIZINAN -->
+
+        <div class="service">
+
+            <div class="service-icon">
+                📄
+            </div>
+
+            <div>
+
+                <span class="service-label">
+                    PERIZINAN
+                </span>
+
+                <h3>
+                    Informasi Perizinan
+                </h3>
+
+                <p>
+                    Informasi umum mengenai
+                    pelayanan perizinan.
+                </p>
+
+                <button onclick="info('izin')">
+                    Lihat Informasi
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- KONSULTASI -->
+
+        <div class="service">
+
+            <div class="service-icon">
+                💬
+            </div>
+
+            <div>
+
+                <span class="service-label">
+                    INFORMASI
+                </span>
+
+                <h3>
+                    Konsultasi
+                </h3>
+
+                <p>
+                    Bantuan informasi mengenai
+                    layanan yang tersedia.
+                </p>
+
+                <button onclick="info('konsultasi')">
+                    Lihat Informasi
+                </button>
+
+            </div>
+
+        </div>
+
+
+
+        <!-- PENGADUAN -->
+
+        <div class="service">
+
+            <div class="service-icon">
+                📢
+            </div>
+
+            <div>
+
+                <span class="service-label">
+                    PENGADUAN
+                </span>
+
+                <h3>
+                    Pengaduan Pelayanan
+                </h3>
+
+                <p>
+                    Informasi mengenai kanal
+                    pengaduan pelayanan.
+                </p>
+
+                <button onclick="info('pengaduan')">
+                    Lihat Informasi
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= MODAL ================= -->
+
+<div id="modal">
+
+    <div class="modal-box">
+
+        <button
+            class="close"
+            onclick="tutupModal()"
+        >
+            ×
+        </button>
+
+        <h2 id="modalJudul">
+            Informasi Layanan
+        </h2>
+
+        <div id="modalIsi">
+            Informasi.
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<!-- ================= BANTUAN ================= -->
+
+<section class="help" id="bantuan">
+
+    <div class="help-container">
+
+        <div>
+
+            <span>
+                BUTUH BANTUAN?
+            </span>
+
+            <h2>
+                Jangan ragu untuk bertanya.
+            </h2>
+
+            <p>
+
+                Jika mengalami kesulitan memperoleh
+                informasi pelayanan, silakan
+                menghubungi petugas pelayanan.
+
+            </p>
+
+        </div>
+
+
+        <div class="contact">
+
+            <div class="contact-icon">
+                📞
+            </div>
+
+            <div>
+
+                <strong>
+                    Kontak Pelayanan
+                </strong>
+
+                <p>
+                    Silakan hubungi petugas
+                    untuk mendapatkan bantuan.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- ================= FOOTER ================= -->
+
+<footer>
+
+    <h3>
+        SIPANDU
+    </h3>
+
+    <p>
+        Sistem Informasi Pelayanan
+        Ramah Disabilitas
+    </p>
+
+    <p>
+        Prototype Projek PKL TKJ
+    </p>
+
+    <p>
+        © 2026
+    </p>
+
+</footer>
+
+
+
+<script>
+
+/* ====================
